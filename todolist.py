@@ -1,30 +1,26 @@
 import tampilan as tp
-from data import data 
 tp.tampilanAwal()
 
-listku = data()
+todoList = []
 
-if not listku:
-  print('tugas kamu kosong')
-else:
-  print('Berikut tugas kamu:')
+
 
 
 def input_tugas():
   print('Masukann tugas kamu: ')
   i = 1
-  while i <= 5:
+  while i <= 5 :
     masukan_tugas = input('Tugas ke-{}: '.format(i))
-    listku.append(masukan_tugas)
+    todoList.append(masukan_tugas)
     i+=1
-  return listku
+  return todoList
 
   
   
 
-def tampilkan_tugas(tugas_baru=listku):
-  for i in range(len(tugas_baru)):
-    print('Tugas ke-{}: {}'.format(i+1, tugas_baru[i]))
+def tampilkan_tugas(tugas=todoList):
+  for i in range(len(tugas)):
+    print('Tugas ke-{}: {}'.format(i+1, tugas[i]))
 
 
 def main():
